@@ -6,43 +6,43 @@
     <title>Perpustakaan Sederhana</title>
     <style>
         body {
-            font-family: Arial, sans-serif; /* Ganti font menjadi lebih sederhana */
-            background-color: #2d1b69; /* Ungu tua */
+            font-family: Arial, sans-serif; 
+            background-color: #2d1b69; 
             color: white;
             margin: 0;
             padding: 0;
         }
         
         .container {
-            width: 90%; /* Lebar kontainer lebih kecil */
-            margin: 20px auto; /* Margin atas dan bawah */
-            padding: 10px; /* Padding lebih sedikit */
+            width: 90%;
+            margin: 20px auto; 
+            padding: 10px;
         }
         
         header {
             text-align: center;
-            padding: 20px; /* Padding lebih sedikit */
-            border-bottom: 1px solid #9c88ff; /* Ganti border menjadi lebih sederhana */
+            padding: 20px; 
+            border-bottom: 1px solid #9c88ff; 
         }
         
         h1 {
-            font-size: 2rem; /* Ukuran font lebih kecil */
+            font-size: 2rem;
             margin: 0;
         }
         
         .search-box {
-            margin: 20px 0; /* Margin atas dan bawah */
+            margin: 20px 0; 
         }
         
         .search-box input {
-            width: 70%; /* Lebar input lebih kecil */
-            padding: 10px; /* Padding lebih sedikit */
-            border: 1px solid #ccc; /* Border sederhana */
-            border-radius: 5px; /* Sudut lebih bulat */
+            width: 70%; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
         }
         
         .search-box button {
-            padding: 10px; /* Padding lebih sedikit */
+            padding: 10px; 
             background-color: #9c88ff;
             color: white;
             border: none;
@@ -50,32 +50,34 @@
         }
         
         .books-grid {
-            display: flex; /* Ganti grid menjadi flexbox */
-            flex-wrap: wrap; /* Membungkus item */
-            gap: 10px; /* Jarak antar buku */
+            display: flex; 
+            flex-wrap: wrap;
+            gap: 10px;
         }
         
         .book-card {
             background: #3a2a77;
-            padding: 10px; /* Padding lebih sedikit */
-            width: 200px; /* Lebar tetap untuk setiap buku */
-            margin-bottom: 10px; /* Margin bawah */
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 10px;
         }
         
         .book-cover {
-            height: 150px; /* Tinggi tetap untuk sampul buku */
+            height: 150px;
             background: #5d4b9e;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #d1d1d1;
-            margin-bottom: 10px; /* Margin bawah */
+            margin-bottom: 10px;
         }
+
         
         .book-title {
             font-weight: bold;
             margin-bottom: 5px;
         }
+
         
         .book-author {
             font-size: 0.9rem;
@@ -85,12 +87,17 @@
         .book-status {
             font-size: 0.85rem;
         }
+
         
         footer {
             text-align: center;
-            padding: 10px; /* Padding lebih sedikit */
-            margin-top: 20px; /* Margin atas */
+            padding: 10px;
+            margin-top: 20px; 
         }
+
+
+
+        
     </style>
 </head>
 <body>
@@ -108,9 +115,9 @@
         <div class="books-grid">
             <!-- Buku 1 -->
             <div class="book-card">
-                <div class="book-cover">Cover 1</div>
-                <div class="book-title">Laskar Pelangi</div>
-                <div class="book-author">Andrea Hirata</div>
+                <div class="book-cover">https://literaturperkantas.com/wp-content/uploads/2024/06/2022-Hollywood-Heroes-3D-kcl.png</div>
+                <div class="book-title">Hollywood Heroes</div>
+                <div class="book-author">Frank Turek & Zach Turek</div>
                 <div class="book-status">
                     <span class="available">Tersedia</span>
                     <button class="borrow-btn">Pinjam</button>
@@ -119,9 +126,9 @@
             
             <!-- Buku 2 -->
             <div class="book-card">
-                <div class="book-cover">Cover 2</div>
-                <div class="book-title">Ayat-Ayat Cinta</div>
-                <div class="book-author">Habiburrahman El Shirazy</div>
+                <div class="book-cover">https://literaturperkantas.com/wp-content/uploads/2024/06/Tetap-Segar-ISBN-600x600.png</div>
+                <div class="book-title">Tetap Segar di Tengah Rutinitas</div>
+                <div class="book-author">Monna Rahardjo, dkk</div>
                 <div class="book-status">
                     <span class="available">Tersedia</span>
                     <button class="borrow-btn">Pinjam</button>
@@ -130,9 +137,9 @@
             
             <!-- Buku 3 -->
             <div class="book-card">
-                <div class="book-cover">Cover 3</div>
-                <div class="book-title">Bumi Manusia</div>
-                <div class="book-author">Pramoedya Ananta Toer</div>
+                <div class="book-cover">https://literaturperkantas.com/wp-content/uploads/2024/03/Lets_Go.png</div>
+                <div class="book-title">Let's Go</div>
+                <div class="book-author">Staf Siswa Perkantas Nasional</div>
                 <div class="book-status">
                     <span class="borrowed">Dipinjam</span>
                     <button class="borrow-btn" disabled>Pinjam</button>
@@ -141,9 +148,9 @@
             
             <!-- Buku 4 -->
             <div class="book-card">
-                <div class="book-cover">Cover 4</div>
-                <div class="book-title">Harry Potter</div>
-                <div class="book-author">J.K. Rowling</div>
+                <div class="book-cover">https://literaturperkantas.com/wp-content/uploads/2024/06/2024-7-Myths-about-Singleness-3D.png</div>
+                <div class="book-title">7 Myths About Singleness</div>
+                <div class="book-author">Sam Allberry</div>
                 <div class="book-status">
                     <span class="available">Tersedia</span>
                     <button class="borrow-btn">Pinjam</button>
@@ -152,7 +159,7 @@
         </div>
         
         <footer>
-            <p>© 2023 Perpustakaan Digital. Seluruh hak cipta dilindungi.</p>
+            <p>Pustaka Kita 2025</p>
         </footer>
     </div>
     
