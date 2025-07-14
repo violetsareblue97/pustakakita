@@ -63,13 +63,21 @@
         }
         
         .book-cover {
-            height: 150px;
-            background: #5d4b9e;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #d1d1d1;
-            margin-bottom: 10px;
+    width: 100%; /* Make the cover take the full width of the card */
+    height: 150px; /* Set a fixed height for the cover */
+    background: #5d4b9e; /* Fallback background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d1d1d1;
+    margin-bottom: 10px; /* Margin below the cover */
+    overflow: hidden; /* Hide overflow */
+        }
+        
+        .book-cover img {
+    width: 100%; /* Make the image take the full width of the cover */
+    height: 100%; /* Make the image take the full height of the cover */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
         }
 
         
