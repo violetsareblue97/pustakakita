@@ -5,158 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perpustakaan Sederhana</title>
     <style>
-        /* Import Font Futura dari Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-        
-        /* Gunakan font Futura atau fallback ke Montserrat */
         body {
-            font-family: 'Montserrat', 'Futura', sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif; /* Ganti font menjadi lebih sederhana */
             background-color: #2d1b69; /* Ungu tua */
             color: white;
-            line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
         
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            width: 90%; /* Lebar kontainer lebih kecil */
+            margin: 20px auto; /* Margin atas dan bawah */
+            padding: 10px; /* Padding lebih sedikit */
         }
         
         header {
             text-align: center;
-            padding: 30px 0;
-            border-bottom: 2px solid #9c88ff;
-            margin-bottom: 30px;
+            padding: 20px; /* Padding lebih sedikit */
+            border-bottom: 1px solid #9c88ff; /* Ganti border menjadi lebih sederhana */
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem; /* Ukuran font lebih kecil */
             margin: 0;
-            color: #f8f8f8;
-            text-transform: uppercase;
-            letter-spacing: 3px;
         }
         
         .search-box {
-            background: #3a2a77;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            display: flex;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin: 20px 0; /* Margin atas dan bawah */
         }
         
         .search-box input {
-            flex: 1;
-            padding: 12px;
-            border: none;
-            border-radius: 5px 0 0 5px;
-            font-size: 1rem;
+            width: 70%; /* Lebar input lebih kecil */
+            padding: 10px; /* Padding lebih sedikit */
+            border: 1px solid #ccc; /* Border sederhana */
+            border-radius: 5px; /* Sudut lebih bulat */
         }
         
         .search-box button {
+            padding: 10px; /* Padding lebih sedikit */
             background-color: #9c88ff;
             color: white;
             border: none;
-            padding: 12px 20px;
-            border-radius: 0 5px 5px 0;
             cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        .search-box button:hover {
-            background-color: #8c7ae6;
         }
         
         .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            display: flex; /* Ganti grid menjadi flexbox */
+            flex-wrap: wrap; /* Membungkus item */
+            gap: 10px; /* Jarak antar buku */
         }
         
         .book-card {
             background: #3a2a77;
-            border-radius: 10px;
-            padding: 15px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            background: #4a3a87;
+            padding: 10px; /* Padding lebih sedikit */
+            width: 200px; /* Lebar tetap untuk setiap buku */
+            margin-bottom: 10px; /* Margin bawah */
         }
         
         .book-cover {
-            width: 100%;
-            height: 200px;
+            height: 150px; /* Tinggi tetap untuk sampul buku */
             background: #5d4b9e;
-            border-radius: 5px;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #d1d1d1;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
-        
-        .book-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            margin-bottom: 10px; /* Margin bawah */
         }
         
         .book-title {
             font-weight: bold;
             margin-bottom: 5px;
-            font-size: 1.1rem;
         }
         
         .book-author {
-            color: #9c88ff;
             font-size: 0.9rem;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         
         .book-status {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             font-size: 0.85rem;
-        }
-        
-        .available {
-            color: #4cd137;
-        }
-        
-        .borrowed {
-            color: #e84118;
-        }
-        
-        .borrow-btn {
-            background: #9c88ff;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        .borrow-btn:hover {
-            background: #8c7ae6;
         }
         
         footer {
             text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-            border-top: 2px solid #9c88ff;
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
+            padding: 10px; /* Padding lebih sedikit */
+            margin-top: 20px; /* Margin atas */
         }
     </style>
 </head>
@@ -164,107 +97,51 @@
     <div class="container">
         <header>
             <h1>Perpustakaan Digital</h1>
-            <p>Temukan buku favorit Anda disini</p>
+            <p>Cari buku favoritmu disini</p>
         </header>
         
         <div class="search-box">
-            <input type="text" placeholder="Cari buku berdasarkan judul, penulis, atau kategori...">
+            <input type="text" placeholder="Cari buku...">
             <button>Search</button>
         </div>
         
         <div class="books-grid">
             <!-- Buku 1 -->
             <div class="book-card">
-                <div class="book-cover">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/91a6af9c-ecff-4312-a6cf-59e068b5f938.png" alt="Sampul buku novel Laskar Pelangi dengan ilustrasi anak-anak di sekolah warna-warni">
-                </div>
+                <div class="book-cover">Cover 1</div>
                 <div class="book-title">Laskar Pelangi</div>
                 <div class="book-author">Andrea Hirata</div>
-                <div class="book-status">
-                    <span class="available">Tersedia</span>
-                    <button class="borrow-btn">Pinjam</button>
-                </div>
+                <div class="book-status">Tersedia</div>
             </div>
             
             <!-- Buku 2 -->
             <div class="book-card">
-                <div class="book-cover">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/30aa30df-d3ea-441f-afef-ec2728948d95.png" alt="Sampul buku Ayat-Ayat Cinta dengan tema indah masjid dan cahaya matahari">
-                </div>
+                <div class="book-cover">Cover 2</div>
                 <div class="book-title">Ayat-Ayat Cinta</div>
                 <div class="book-author">Habiburrahman El Shirazy</div>
-                <div class="book-status">
-                    <span class="available">Tersedia</span>
-                    <button class="borrow-btn">Pinjam</button>
-                </div>
+                <div class="book-status">Tersedia</div>
             </div>
             
             <!-- Buku 3 -->
             <div class="book-card">
-                <div class="book-cover">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4047f8e2-26ad-4413-a84d-7e46d123c342.png" alt="Sampul buku Bumi Manusia dengan nuansa vintage dan potret tokoh">
-                </div>
+                <div class="book-cover">Cover 3</div>
                 <div class="book-title">Bumi Manusia</div>
                 <div class="book-author">Pramoedya Ananta Toer</div>
-                <div class="book-status">
-                    <span class="borrowed">Dipinjam</span>
-                    <button class="borrow-btn" disabled>Pinjam</button>
-                </div>
+                <div class="book-status">Dipinjam</div>
             </div>
             
             <!-- Buku 4 -->
             <div class="book-card">
-                <div class="book-cover">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c3ca2ae7-66b3-4c17-a4db-ca7b84f3dfff.png" alt="Sampul buku Harry Potter dengan ilustrasi sihir dan kastil">
-                </div>
+                <div class="book-cover">Cover 4</div>
                 <div class="book-title">Harry Potter</div>
                 <div class="book-author">J.K. Rowling</div>
-                <div class="book-status">
-                    <span class="available">Tersedia</span>
-                    <button class="borrow-btn">Pinjam</button>
-                </div>
+                <div class="book-status">Tersedia</div>
             </div>
         </div>
         
         <footer>
-            <p>© 2023 Perpustakaan Digital. Seluruh hak cipta dilindungi.</p>
+            <p>© 2023 Perpustakaan Digital</p>
         </footer>
     </div>
-    
-    <script>
-        // Fungsi sederhana untuk tombol pinjam
-        document.querySelectorAll('.borrow-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                if (!this.disabled) {
-                    const bookTitle = this.closest('.book-card').querySelector('.book-title').textContent;
-                    alert(`Terima kasih telah meminjam buku "${bookTitle}"`);
-                    
-                    // Update status buku
-                    const statusElement = this.closest('.book-card').querySelector('.book-status span');
-                    statusElement.textContent = 'Dipinjam';
-                    statusElement.classList.remove('available');
-                    statusElement.classList.add('borrowed');
-                    this.disabled = true;
-                }
-            });
-        });
-        
-        // Fungsi pencarian sederhana
-        document.querySelector('.search-box button').addEventListener('click', function() {
-            const searchTerm = document.querySelector('.search-box input').value.toLowerCase();
-            const books = document.querySelectorAll('.book-card');
-            
-            books.forEach(book => {
-                const title = book.querySelector('.book-title').textContent.toLowerCase();
-                const author = book.querySelector('.book-author').textContent.toLowerCase();
-                
-                if (title.includes(searchTerm) || author.includes(searchTerm)) {
-                    book.style.display = 'block';
-                } else {
-                    book.style.display = 'none';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
