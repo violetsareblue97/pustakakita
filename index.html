@@ -6,63 +6,63 @@
     <title>Perpustakaan Sederhana</title>
     <style>
         body {
-            font-family: Arial, sans-serif; 
-            background-color: #2d1b69;
+            font-family: Arial, sans-serif; /* Ganti font menjadi lebih sederhana */
+            background-color: #2d1b69; /* Ungu tua */
             color: white;
             margin: 0;
             padding: 0;
         }
         
         .container {
-            width: 90%; 
-            margin: 20px auto;
-            padding: 10px; 
+            width: 90%; /* Lebar kontainer lebih kecil */
+            margin: 20px auto; /* Margin atas dan bawah */
+            padding: 10px; /* Padding lebih sedikit */
         }
         
         header {
             text-align: center;
-            padding: 20px;
-            border-bottom: 1px solid #9c88ff;
+            padding: 20px; /* Padding lebih sedikit */
+            border-bottom: 1px solid #9c88ff; /* Ganti border menjadi lebih sederhana */
         }
         
         h1 {
-            font-size: 2rem; 
+            font-size: 2rem; /* Ukuran font lebih kecil */
             margin: 0;
         }
         
-        .searchbox {
-            margin: 20px 0; 
+        .search-box {
+            margin: 20px 0; /* Margin atas dan bawah */
         }
         
-        .searchbox input {
-            width: 70%;
-            padding: 10px;
-            border: 1px solid #ccc; 
-            border-radius: 5px;
+        .search-box input {
+            width: 70%; /* Lebar input lebih kecil */
+            padding: 10px; /* Padding lebih sedikit */
+            border: 1px solid #ccc; /* Border sederhana */
+            border-radius: 5px; /* Sudut lebih bulat */
         }
         
-        .searchbox button {
-            padding: 10px; 
+        .search-box button {
+            padding: 10px; /* Padding lebih sedikit */
             background-color: #9c88ff;
             color: white;
             border: none;
             cursor: pointer;
         }
         
-        .bukugrid {
+        .books-grid {
             display: flex; /* Ganti grid menjadi flexbox */
             flex-wrap: wrap; /* Membungkus item */
             gap: 10px; /* Jarak antar buku */
         }
         
-        .buku-card {
+        .book-card {
             background: #3a2a77;
             padding: 10px; /* Padding lebih sedikit */
             width: 200px; /* Lebar tetap untuk setiap buku */
             margin-bottom: 10px; /* Margin bawah */
         }
         
-        .bukucover {
+        .book-cover {
             height: 150px; /* Tinggi tetap untuk sampul buku */
             background: #5d4b9e;
             display: flex;
@@ -72,24 +72,24 @@
             margin-bottom: 10px; /* Margin bawah */
         }
         
-        .bukujudul {
+        .book-title {
             font-weight: bold;
             margin-bottom: 5px;
         }
         
-        .bukuauthor {
+        .book-author {
             font-size: 0.9rem;
             margin-bottom: 5px;
         }
         
-        .bukustatus {
+        .book-status {
             font-size: 0.85rem;
         }
         
         footer {
             text-align: center;
-            padding: 10px;
-            margin-top: 20px;
+            padding: 10px; /* Padding lebih sedikit */
+            margin-top: 20px; /* Margin atas */
         }
     </style>
 </head>
@@ -97,51 +97,97 @@
     <div class="container">
         <header>
             <h1>Pustaka Kita</h1>
-            <p>Pinjam buku yang kamu suka~</p>
+            <p>Silahkan pilih buku yang ingin Anda pinjam</p>
         </header>
         
         <div class="search-box">
-            <input type="text" placeholder="Cari buku...">
+            <input type="text" placeholder="Cari buku berdasarkan judul, penulis, atau kategori...">
             <button>Search</button>
         </div>
         
-        <div class="bukugrid">
+        <div class="books-grid">
             <!-- Buku 1 -->
-            <div class="buku-card">
-                <div class="bukucover">Cover 1</div>
-                <div class="bukujudul">Laskar Pelangi</div>
-                <div class="bukuauthor">Andrea Hirata</div>
-                <div class="bukustatus">Tersedia</div>
+            <div class="book-card">
+                <div class="book-cover">Cover 1</div>
+                <div class="book-title">Laskar Pelangi</div>
+                <div class="book-author">Andrea Hirata</div>
+                <div class="book-status">
+                    <span class="available">Tersedia</span>
+                    <button class="borrow-btn">Pinjam</button>
+                </div>
             </div>
             
             <!-- Buku 2 -->
-            <div class="buku-card">
-                <div class="bukucover">Cover 2</div>
-                <div class="bukujudul">Ayat-Ayat Cinta</div>
-                <div class="bukuauthor">Habiburrahman El Shirazy</div>
-                <div class="bukustatus">Tersedia</div>
+            <div class="book-card">
+                <div class="book-cover">Cover 2</div>
+                <div class="book-title">Ayat-Ayat Cinta</div>
+                <div class="book-author">Habiburrahman El Shirazy</div>
+                <div class="book-status">
+                    <span class="available">Tersedia</span>
+                    <button class="borrow-btn">Pinjam</button>
+                </div>
             </div>
             
             <!-- Buku 3 -->
-            <div class="buku-card">
-                <div class="bukucover">Cover 3</div>
-                <div class="bukujudul">Bumi Manusia</div>
-                <div class="bukuauthor">Pramoedya Ananta Toer</div>
-                <div class="bukustatus">Dipinjam</div>
+            <div class="book-card">
+                <div class="book-cover">Cover 3</div>
+                <div class="book-title">Bumi Manusia</div>
+                <div class="book-author">Pramoedya Ananta Toer</div>
+                <div class="book-status">
+                    <span class="borrowed">Dipinjam</span>
+                    <button class="borrow-btn" disabled>Pinjam</button>
+                </div>
             </div>
             
             <!-- Buku 4 -->
-            <div class="buku-card">
-                <div class="bukucover">Cover 4</div>
-                <div class="bukujudul">Harry Potter</div>
-                <div class="bukuauthor">J.K. Rowling</div>
-                <div class="bukustatus">Tersedia</div>
+            <div class="book-card">
+                <div class="book-cover">Cover 4</div>
+                <div class="book-title">Harry Potter</div>
+                <div class="book-author">J.K. Rowling</div>
+                <div class="book-status">
+                    <span class="available">Tersedia</span>
+                    <button class="borrow-btn">Pinjam</button>
+                </div>
             </div>
         </div>
         
         <footer>
-                <p>Pustaka Kita 2025</p>
+            <p>© 2023 Perpustakaan Digital. Seluruh hak cipta dilindungi.</p>
         </footer>
     </div>
+    
+    <script>
+ 
+        document.querySelectorAll('.borrow-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if (!this.disabled) {
+                    const bookTitle = this.closest('.book-card').querySelector('.book-title').textContent;
+                    alert(`Terima kasih telah meminjam buku "${bookTitle}"`);
+                    
+                    const statusElement = this.closest('.book-card').querySelector('.book-status span');
+                    statusElement.textContent = 'Dipinjam';
+                    statusElement.classList.remove('available');
+                    statusElement.classList.add('borrowed');
+                    this.disabled = true;
+                }
+            });
+        });
+        
+        document.querySelector('.search-box button').addEventListener('click', function() {
+            const searchTerm = document.querySelector('.search-box input').value.toLowerCase();
+            const books = document.querySelectorAll('.book-card');
+            
+            books.forEach(book => {
+                const title = book.querySelector('.book-title').textContent.toLowerCase();
+                const author = book.querySelector('.book-author').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || author.includes(searchTerm)) {
+                    book.style.display = 'block';
+                } else {
+                    book.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
