@@ -6,63 +6,63 @@
     <title>Perpustakaan Sederhana</title>
     <style>
         body {
-            font-family: Arial, sans-serif; /* Ganti font menjadi lebih sederhana */
-            background-color: #2d1b69; /* Ungu tua */
+            font-family: Arial, sans-serif; 
+            background-color: #2d1b69;
             color: white;
             margin: 0;
             padding: 0;
         }
         
         .container {
-            width: 90%; /* Lebar kontainer lebih kecil */
-            margin: 20px auto; /* Margin atas dan bawah */
-            padding: 10px; /* Padding lebih sedikit */
+            width: 90%; 
+            margin: 20px auto;
+            padding: 10px; 
         }
         
         header {
             text-align: center;
-            padding: 20px; /* Padding lebih sedikit */
-            border-bottom: 1px solid #9c88ff; /* Ganti border menjadi lebih sederhana */
+            padding: 20px;
+            border-bottom: 1px solid #9c88ff;
         }
         
         h1 {
-            font-size: 2rem; /* Ukuran font lebih kecil */
+            font-size: 2rem; 
             margin: 0;
         }
         
-        .search-box {
-            margin: 20px 0; /* Margin atas dan bawah */
+        .searchbox {
+            margin: 20px 0; 
         }
         
-        .search-box input {
-            width: 70%; /* Lebar input lebih kecil */
-            padding: 10px; /* Padding lebih sedikit */
-            border: 1px solid #ccc; /* Border sederhana */
-            border-radius: 5px; /* Sudut lebih bulat */
+        .searchbox input {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc; 
+            border-radius: 5px;
         }
         
-        .search-box button {
-            padding: 10px; /* Padding lebih sedikit */
+        .searchbox button {
+            padding: 10px; 
             background-color: #9c88ff;
             color: white;
             border: none;
             cursor: pointer;
         }
         
-        .books-grid {
+        .bukugrid {
             display: flex; /* Ganti grid menjadi flexbox */
             flex-wrap: wrap; /* Membungkus item */
             gap: 10px; /* Jarak antar buku */
         }
         
-        .book-card {
+        .buku-card {
             background: #3a2a77;
             padding: 10px; /* Padding lebih sedikit */
             width: 200px; /* Lebar tetap untuk setiap buku */
             margin-bottom: 10px; /* Margin bawah */
         }
         
-        .book-cover {
+        .bukucover {
             height: 150px; /* Tinggi tetap untuk sampul buku */
             background: #5d4b9e;
             display: flex;
@@ -72,32 +72,32 @@
             margin-bottom: 10px; /* Margin bawah */
         }
         
-        .book-title {
+        .bukujudul {
             font-weight: bold;
             margin-bottom: 5px;
         }
         
-        .book-author {
+        .bukuauthor {
             font-size: 0.9rem;
             margin-bottom: 5px;
         }
         
-        .book-status {
+        .bukustatus {
             font-size: 0.85rem;
         }
         
         footer {
             text-align: center;
-            padding: 10px; /* Padding lebih sedikit */
-            margin-top: 20px; /* Margin atas */
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Perpustakaan Digital</h1>
-            <p>Cari buku favoritmu disini</p>
+            <h1>Pustaka Kita</h1>
+            <p>Pinjam buku yang kamu suka~</p>
         </header>
         
         <div class="search-box">
@@ -105,42 +105,42 @@
             <button>Search</button>
         </div>
         
-        <div class="books-grid">
+        <div class="bukugrid">
             <!-- Buku 1 -->
-            <div class="book-card">
-                <div class="book-cover">Cover 1</div>
-                <div class="book-title">Laskar Pelangi</div>
-                <div class="book-author">Andrea Hirata</div>
-                <div class="book-status">Tersedia</div>
+            <div class="buku-card">
+                <div class="bukucover">Cover 1</div>
+                <div class="bukujudul">Laskar Pelangi</div>
+                <div class="bukuauthor">Andrea Hirata</div>
+                <div class="bukustatus">Tersedia</div>
             </div>
             
             <!-- Buku 2 -->
-            <div class="book-card">
-                <div class="book-cover">Cover 2</div>
-                <div class="book-title">Ayat-Ayat Cinta</div>
-                <div class="book-author">Habiburrahman El Shirazy</div>
-                <div class="book-status">Tersedia</div>
+            <div class="buku-card">
+                <div class="bukucover">Cover 2</div>
+                <div class="bukujudul">Ayat-Ayat Cinta</div>
+                <div class="bukuauthor">Habiburrahman El Shirazy</div>
+                <div class="bukustatus">Tersedia</div>
             </div>
             
             <!-- Buku 3 -->
-            <div class="book-card">
-                <div class="book-cover">Cover 3</div>
-                <div class="book-title">Bumi Manusia</div>
-                <div class="book-author">Pramoedya Ananta Toer</div>
-                <div class="book-status">Dipinjam</div>
+            <div class="buku-card">
+                <div class="bukucover">Cover 3</div>
+                <div class="bukujudul">Bumi Manusia</div>
+                <div class="bukuauthor">Pramoedya Ananta Toer</div>
+                <div class="bukustatus">Dipinjam</div>
             </div>
             
             <!-- Buku 4 -->
-            <div class="book-card">
-                <div class="book-cover">Cover 4</div>
-                <div class="book-title">Harry Potter</div>
-                <div class="book-author">J.K. Rowling</div>
-                <div class="book-status">Tersedia</div>
+            <div class="buku-card">
+                <div class="bukucover">Cover 4</div>
+                <div class="bukujudul">Harry Potter</div>
+                <div class="bukuauthor">J.K. Rowling</div>
+                <div class="bukustatus">Tersedia</div>
             </div>
         </div>
         
         <footer>
-            <p>© 2023 Perpustakaan Digital</p>
+                <p>Pustaka Kita 2025</p>
         </footer>
     </div>
 </body>
